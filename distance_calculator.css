@@ -6,13 +6,36 @@ body {
     color: white;
 }
 
+#heading {
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    margin-top: 5vw;
+}
+
+#form-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    margin-bottom: 1.5vh;
+}
+
 .fa-solid {
     color: rgb(255, 255, 255);
     font-size: 14px;
 }
 
 #map_display {
-    width: 90vw;
+    width: 90vw; 
     height: 50vh;
     border: 2px solid rgb(255, 255, 255);
     margin-left: 3.2vw;  
@@ -20,10 +43,11 @@ body {
 }
 
 input {
-    width: 90vw;
-    height: 6vh;
-    
+    width: 40vw;
+    height: 8vh;
     margin-bottom: 1.5vh;
+    margin-left: 3.7vw;
+    margin-right: 4vw;
     border-radius: 10px;
     border: none;
     padding-left: 15px;
@@ -32,8 +56,8 @@ input {
 }
 
 button {
-    width: 30.5vw;
-    height: 5vw;
+    width: 90vw;
+    height: 3vw;
     margin-bottom: 1.5vh;
     font-weight: bold;
     font-size: 16px;
@@ -44,24 +68,97 @@ button {
 }
 
 button:hover {
-    background-color: rgb(152, 152, 233);;
+    background-color: rgb(178, 178, 209);
 }
 
 label {
+    margin-top: 1.5vh;
+    font-size: 26px;
+}
+
+#map-tip {
+    font-weight: lighter;
+    font-style: italic;
+    color: green;
+    margin-bottom: 1.5vh;
     margin-top: 1.5vh;
 }
 
 #distance_display {
     height: 30vh;
     width: 90vw;
-    border: 2px solid rgb(255, 255, 255);
-    margin-top: 40px;
+    border: 2px solid rgb(8, 8, 41);
+    margin-top: 1.5vh;
     margin-left: 3.2vw;
     align-items: center; 
     padding-top: 10px;
     border-radius: 10px;
+    background-color: white;
+    color: rgb(8, 8, 41);
 }
 
 h2 {
     font-size: 50px;
 }
+
+@media (max-width: 600px) {
+    body {
+      background-color: rgb(8, 8, 41);
+      font-size: 10px;
+      scrollbar-darkshadow-color: auto;
+      height: 120vh;
+      margin: 0;
+      overflow: scroll;
+    }
+
+    .container {
+        margin-top: 10vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #form-section {
+        margin-top: 1.5vh;
+        display: block;
+    }
+
+    input {
+        width: 90%;
+        height: 10vh;
+        display: flex;
+        margin-left: 3vw;
+    }
+
+    label {
+        font-size: 14px;
+    }
+    button {
+        width: 50%;
+        margin-left: 3vw;
+        height: 8vh;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        color: rgb(8, 8, 41);
+        background-color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 5px 10px 5px 10px;
+    }
+
+    button:hover {
+        background-color: rgb(178, 178, 209);
+    }
+
+    #map_display {
+        width: 93.5%;
+        display: flex;
+        margin-left: 3vw;
+    }
+
+    #distance_display {
+        width: 93.5%;
+        display: flex;
+        margin-left: 3vw;
+    }
+  }

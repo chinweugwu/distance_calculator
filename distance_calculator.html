@@ -6,31 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./distance_calculator.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js" defer></script>
-    <title>Document</title>
+    
+    <link rel="stylesheet" href="./leaflet.css" />
+    <script src="./leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.css" rel="stylesheet" />
+    <script src="https://cdn.maptiler.com/leaflet-maptilersdk/latest/leaflet-maptilersdk.js"></script>
+    <script src="https://unpkg.com/@maptiler/geocoding-control@latest/leaflet.umd.js"></script>
+    <link href="https://unpkg.com/@maptiler/geocoding-control@latest/style.css" rel="stylesheet"/>
+    <!--<script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js" defer></script>-->
+    
+    <title>Distance Calculator</title>
 </head>
 <body>
+   
     <div class="container">
+        <section id="heading">
+            <h1>DISTANCE CALCULATOR</h1>
+        </section>
         <section class="map_prompt">
             <form action="" class="map_prompt_info">
-                <label for="point_a_input" class="point_a">POINT A <i class="fa-solid fa-person-to-portal"></i> </label><br>
-                <input type="text" id="point_a_input" placeholder="POINT A"><br>
-
-                <label for="point_b_input" class="point_b">POINT B <i class="fa-solid fa-person-from-portal"></i> </label><br>
-                <input type="text" id="point_b_input" placeholder="POINT B"><br>
-
-                <button id="distance_btn" type="button">Calculate Distance</button>
-
+                <section id="form-section">
+                    <section id="point-a">
+                        <label for="point_a_input" class="point_a">COORDINATES: POINT A</label><br>
+                       
+                        <input type="text" id="point_a_input" placeholder="0, 0"><br>
+                    </section>
+                    <section id="point-b">
+                        <label for="point_b_input" class="point_b">COORDINATES: POINT B <i class="fa-solid fa-person-from-portal"></i> </label><br>
+                        <input type="text" id="point_b_input" placeholder="0, 0"><br>
+                        
+                    </section>
+                    
+                </section>
+                <button id="distance_btn" type="button">Calculate Distance</button><br>
+                <i id="map-tip">N.B: Leave a space after the comma when entering coordinates</i><br>
+                <i id="map-tip">Tip: Search or click on any location on the map to get it's coordinates</i>
             </form>
-        </section>
-        <div id="map_display">
-
-        </div>
-        <section id="distance_display">
-
-        </section>
+            <div id="map_display">
+            </div>
+            <section id="distance_display">
+                <i>Distance will display here</i>
+            </section>
+        </section>  
     </div>  
-    <script src="distance_calculator.js" defer></script> 
+    <script src="distance_calculator.js" defer></script>
 </body>
 </html>
